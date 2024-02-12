@@ -280,6 +280,8 @@ No_Users="$(awk -F: '$3 >= '$UIDN' && $1 != "nobody" {print $1}' /etc/passwd | w
 echo -e "$bar2"
 echo -e " Numero de Tokens: "$No_Users
 echo -e "$bar2"
+msg -bar "Enter Para Continuar" && read enter
+menu
 }
 #ELIMINAR EXPIRADOS
 expirados () {
@@ -374,7 +376,7 @@ fi
 
 echo " "
 echo " "
-msg -ne "Enter Para Continuar" && read enter
+msg -bar "Enter Para Continuar" && read enter
 menu
 }
 No_token="$(cat /etc/token/BD | wc -l)"
