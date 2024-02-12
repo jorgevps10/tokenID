@@ -188,9 +188,10 @@ else
   echo -e "$bar1"
 	echo -e " El Token que ingresaste no existe"
 	echo -e "$bar1"
-fi
-msg -ne "Enter Para Continuar" && read enter
+  msg -ne "Enter Para Continuar" && read enter
 menu
+fi
+
 }
 #EDITAR TOKEN
 editar (){
